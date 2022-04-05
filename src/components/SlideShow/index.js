@@ -29,7 +29,7 @@ export const SlideShow = ({albums, songs}) => {
 
         if (albums[index].rank === s.rank){
           console.log('match!')
-          return `${s.song }  `
+          return `${s.song } `
         } else  {
           return false
         }
