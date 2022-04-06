@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import ReactDOM from 'react-dom/client';
 import images from './images.json'
 
 export const SlideShow = ({albums, songs}) => {
@@ -41,7 +40,7 @@ export const SlideShow = ({albums, songs}) => {
   return (
 
         <div className="slideshow">
-          <img className="mainImg" src={images[index].image} />
+          <img className="Imgs" src={images[index].image} />
             <h1>{`${albums[index].rank}. `}{`"${albums[index].album}"`}</h1>
             <p>Standout Songs: {songForAlbum}</p>
           <div className="actions">

@@ -21,22 +21,29 @@ export const Discography = () => {
 
  const [topSongs, setTopSongs] = useState([
     {rank: 6, song: 'Runaway'},
-    {rank: 1, song: 'Jesus Walks'},
+    {rank: 10, song: 'Bound'},
     {rank: 1, song: 'Gold Digger'},
-    {rank: 3, song: 'Flashing Lights'},
+    {rank: 4, song: 'Freee'},
     {rank: 3, song: 'Power'},
-    {rank: 1, song: 'Two Words'},
+    {rank: 5, song: 'Heard em say'},
     {rank: 6, song: 'Devil In a New Dress'},
     {rankt: 1, song: 'Through The Wire'},
     {rank: 3, song: 'Stronger'},
-    {rank: 1, song: 'All Falls Down'}
+    {rank: 1, song: 'All Falls Down'},
+    {rank: 2, song: 'Heartless'},
+    {rank: 7, song: 'Ultralight Beam'},
+    {rank: 9, song: 'All mine'},
+    {rank: 8, song: 'In Paris'}
+
 ])
 
   return (
-      <div className="Discogs">
-      <Albums albums={topAlbums} />
-      <Songs songs={topSongs} />
-      <SlideShow albums={topAlbums} songs={topSongs}  />
-     </div>
+    <>
+    <div className="Discogs">
+    <Albums albums={topAlbums} />
+    <Songs songs={topSongs} />
+   </div>
+    <SlideShow albums={topAlbums} songs={topSongs}  />
+    </>
   )
 }

@@ -14,3 +14,14 @@ body {
 ul {
     list-style-type: none;
 }
+
+.slideshow {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.Imgs {
+    box-shadow: 5px 5px 15px -4px #000000;
+    border-radius: 20px;
+}
