@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {Albums} from '../Albums';
 import {Songs} from '../Songs';
 import { SlideShow } from '../SlideShow';
+import { Quotes } from '../Quotes';
 
 
 export const Discography = () => {
@@ -44,6 +45,7 @@ export const Discography = () => {
     <Songs songs={topSongs} />
    </div>
     <SlideShow albums={topAlbums} songs={topSongs}  />
+    <Quotes />
     </>
   )
 }
