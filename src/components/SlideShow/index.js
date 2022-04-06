@@ -40,7 +40,7 @@ export const SlideShow = ({albums, songs}) => {
   return (
 
         <div className="slideshow">
-          <img className="Imgs" src={images[index].image} />
+          <img className="Imgs" src={`${window.location.protocol}//${window.location.host}${images[index].image}`} />
             <h1>{`${albums[index].rank}. `}{`"${albums[index].album}"`}</h1>
             <p>Standout Songs: {songForAlbum}</p>
           <div className="actions">

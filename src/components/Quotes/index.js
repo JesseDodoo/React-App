@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from 'react';
-import axios from 'axios'
+import axios from 'axios';
 export const Quotes = () => {
     const [kanyeQuote, setKanyeQuote] = useState([])
 
@@ -15,8 +15,8 @@ export const Quotes = () => {
 
     useEffect(()=> {
         getQuotes()
-        let int = setInterval(getQuotes, 5000)
-        return () => clearInterval(int)
+        // let int = setInterval(getQuotes, 5000)
+        // return () => clearInterval(int)
     },[])
 
 
