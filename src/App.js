@@ -1,11 +1,20 @@
 import React from 'react'
-import { Discography } from './pages/'
+import {Routes, Route} from 'react-router-dom'
+import { Discography, Landing } from './pages'
+import {Header, Footer} from './layout'
 import './App.css'
 
 const App = () => {
     return (
         <>
-        <Discography />
+        <Header />
+
+        <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="discography" element={<Discography />} />
+        </Routes>
+
+        <Footer />
         </>
         
     )
