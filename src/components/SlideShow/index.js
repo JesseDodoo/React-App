@@ -5,9 +5,9 @@ export const SlideShow = ({albums, songs}) => {
 
     const [index, setIndex] = useState(0)
 
-    useEffect(() => {
-        setIndex(0)
-    }, [])
+    // useEffect(() => {
+    //     setIndex(0)
+    // }, [])
 
     const next = () => {
         if (index === images.length - 1) {

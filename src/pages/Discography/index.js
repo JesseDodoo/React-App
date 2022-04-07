@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import {Albums} from '../Albums';
-import {Songs} from '../Songs';
-import { SlideShow } from '../SlideShow';
-import { Quotes } from '../Quotes';
+import {Albums, Songs, SlideShow, Quotes} from '../../components';
 
 
 export const Discography = () => {

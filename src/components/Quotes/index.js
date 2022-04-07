@@ -1,5 +1,6 @@
 import React, {useState, useEffect}from 'react';
 import axios from 'axios';
+
 export const Quotes = () => {
     const [kanyeQuote, setKanyeQuote] = useState([])
 
@@ -7,7 +8,6 @@ export const Quotes = () => {
         try {
             let {data, error} = await axios.get('https://api.kanye.rest/')
             setKanyeQuote(data)
-            console.log(data)
         }catch (e) {
             console.warn(e.message)
         }
@@ -22,7 +22,7 @@ export const Quotes = () => {
 
   return (
       <>
-      <div>
+      <div className='Quotes'>
           <h1>A great Kanye once said:</h1>
           <p>{`"${kanyeQuote.quote}"`}</p>
       </div>

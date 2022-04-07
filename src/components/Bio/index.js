@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Bio = () => {
+    
     return (
         <div>
             <h1>Kanye West</h1>

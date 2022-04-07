@@ -1,12 +1,10 @@
-// App.js
 import React from 'react'
-import {Bio, Discography, Albums, Songs, SlideShow} from './components/index'
+import { Discography } from './pages/'
 import './App.css'
 
 const App = () => {
     return (
         <>
-        <Bio />
         <Discography />
         </>
         
