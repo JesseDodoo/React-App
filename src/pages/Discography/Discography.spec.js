@@ -17,4 +17,11 @@ describe('Discography', ()=> {
         userEvent.click(nextButton);
 
       });
+
+      test('shows images of Kanye Albums', () => {
+        const image = screen.getByRole('img', { name:"img"});
+        expect(image).toBeInTheDocument();
+    })
+
+
 })

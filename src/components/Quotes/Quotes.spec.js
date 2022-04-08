@@ -1,11 +1,14 @@
-import { render, screen, within } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { screen, within, waitFor } from '@testing-library/react';
 import {Quotes} from './index';
+
 import axios from 'axios';
 jest.mock('axios')
 
 describe('Quotes', () => {
-    beforeEach(() => jest.resetAllMocks())
+    beforeEach(() => {
+        jest.resetAllMocks();
+        jest.useFakeTimers();
+    })
 
     const mockKanyeQuote = {
         quote: 'i am the best rapper alive'
@@ -14,8 +17,20 @@ describe('Quotes', () => {
     test('to see if an api request has been made', async () => {
         axios.get.mockResolvedValue({data: mockKanyeQuote});
         render(<Quotes />);
-        expect(axios.get).toHaveBeenCalled()
+        await waitFor (() => {
+            expect(axios.get).toHaveBeenCalled()
+        })
     })
+
+    test('it calls the official Kanye api on mount and renders a quote', async () => {
+        axios.get.mockResolvedValue({ data: {quote: 'i am the best rapper alive'} })
+        render(<Quotes />)
+        await waitFor(() => {
+            expect(axios.get).toHaveBeenCalledWith("https://api.kanye.rest/")
+        })
+    })
+
+
 })
 
 describe('Quotes', ()=> {

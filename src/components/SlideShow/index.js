@@ -35,7 +35,7 @@ export const SlideShow = ({albums, songs}) => {
   return (
 
         <div id="slideshow" className="slideshow">
-          <img className="Imgs"  src={`${window.location.protocol}//${window.location.host}${images[index].image}`} />
+          <img aria-label="img" className="Imgs"  src={`${window.location.protocol}//${window.location.host}${images[index].image}`} />
             <h1>{`${albums[index].rank}. `}{`"${albums[index].album}"`}</h1>
             <p role="img">Standout Songs: {songForAlbum}</p>
           <div className="actions">
