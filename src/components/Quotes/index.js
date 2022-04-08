@@ -15,8 +15,8 @@ export const Quotes = () => {
 
     useEffect(()=> {
         getQuotes()
-        // let int = setInterval(getQuotes, 5000)
-        // return () => clearInterval(int)
+        let int = setInterval(getQuotes, 5000)
+        return () => { clearInterval(int) }
     },[])
 
 
