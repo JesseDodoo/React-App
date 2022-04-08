@@ -25,7 +25,7 @@ export const Discography = () => {
     {rank: 3, song: 'Power'},
     {rank: 5, song: 'Heard em say'},
     {rank: 6, song: 'Devil In a New Dress'},
-    {rankt: 1, song: 'Through The Wire'},
+    {rank: 1, song: 'Through The Wire'},
     {rank: 3, song: 'Stronger'},
     {rank: 1, song: 'All Falls Down'},
     {rank: 2, song: 'Heartless'},
@@ -37,7 +37,7 @@ export const Discography = () => {
 
   return (
     <>
-    <div className="Discogs">
+    <div role="discogs" className="Discogs">
     <Albums albums={topAlbums} />
     <Songs songs={topSongs} />
    </div>

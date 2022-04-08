@@ -5,10 +5,6 @@ export const SlideShow = ({albums, songs}) => {
 
     const [index, setIndex] = useState(0)
 
-    // useEffect(() => {
-    //     setIndex(0)
-    // }, [])
-
     const next = () => {
         if (index === images.length - 1) {
           setIndex(0)
@@ -27,7 +23,6 @@ export const SlideShow = ({albums, songs}) => {
       const songForAlbum = songs.map(s => {
 
         if (albums[index].rank === s.rank){
-          console.log('match!')
           return `${s.song } `
         } else  {
           return false
@@ -39,13 +34,13 @@ export const SlideShow = ({albums, songs}) => {
 
   return (
 
-        <div className="slideshow">
-          <img className="Imgs" src={`${window.location.protocol}//${window.location.host}${images[index].image}`} />
+        <div id="slideshow" className="slideshow">
+          <img className="Imgs"  src={`${window.location.protocol}//${window.location.host}${images[index].image}`} />
             <h1>{`${albums[index].rank}. `}{`"${albums[index].album}"`}</h1>
-            <p>Standout Songs: {songForAlbum}</p>
+            <p role="img">Standout Songs: {songForAlbum}</p>
           <div className="actions">
-            <button onClick={prev}>👈</button>
-            <button onClick={next}>👉</button>
+            <button aria-label="prevAlbum" onClick={prev}>👈</button>
+            <button aria-label="nextAlbum" onClick={next}>👉</button>
           </div>
         </div>
       

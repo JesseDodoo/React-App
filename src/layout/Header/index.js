@@ -11,7 +11,7 @@ const goBack = () => goTo(-1)
   return (
     <nav>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="discography">Discography</NavLink>
+      <NavLink role="discography" to="discography">Discography</NavLink>
       <NavLink to="AboutUs">About Us</NavLink>
       <NavLink to="Contact">Contact</NavLink>
       <button onClick={goBack}>Back</button>

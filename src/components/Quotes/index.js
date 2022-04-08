@@ -22,7 +22,7 @@ export const Quotes = () => {
 
   return (
       <>
-      <div className='Quotes'>
+      <div role="quotes" className='Quotes'>
           <h1>A great Kanye once said:</h1>
           <p>{`"${kanyeQuote.quote}"`}</p>
       </div>
